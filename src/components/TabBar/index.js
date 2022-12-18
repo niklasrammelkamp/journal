@@ -1,16 +1,16 @@
 export default function TabBar() {
   return (
     <section className="tabBar">
-      <div>
+      <button className="tabBar--tab tab-focused">
         <p>
           All Entries<span>3</span>
         </p>
-      </div>
-      <div>
+      </button>
+      <button className="tabBar--tab">
         <p>
           Favorites<span>3</span>
         </p>
-      </div>
+      </button>
     </section>
   );
 }

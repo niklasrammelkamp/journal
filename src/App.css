@@ -1,5 +1,30 @@
 @import url(./components/Header/header.css);
+@import url(./components/Form/form.css);
+@import url(./components/TabBar/tabBar.css);
+@import url(./components/Entry/entry.css);
+@import url(./components/EntryList/entryList.css);
+@import url(./components/Footer/footer.css);
 
-.mainBody {
-  margin: 0 30px;
+:root {
+  --primary-color: #a785e2;
+  --font-color: rgb(71, 71, 71);
+  --secondary-color: #f9f8f2;
+}
+
+body {
+  margin: 0;
+  background-color: var(--secondary-color);
+  font-family: "Stacion-Regular";
+  color: var(--font-color);
+}
+
+main {
+  margin: 0 20px;
+}
+
+button {
+  background: none;
+  border: none;
+  font-family: "Stacion-Regular";
+  font-size: 1em;
 }

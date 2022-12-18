@@ -9,15 +9,13 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <div className="mainBody">
-        <Header />
-        <main>
-          <Form />
-          <TabBar />
-          <EntryList />
-        </main>
-        <Footer />
-      </div>
+      <Header />
+      <main>
+        <Form />
+        <TabBar />
+        <EntryList />
+      </main>
+      <Footer />
     </>
   );
 }

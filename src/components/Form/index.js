@@ -1,13 +1,17 @@
 export default function Form() {
   return (
-    <section>
-      <form>
-        <label htmlFor="form__input">Motto</label>
-        <input type="text" id="form__input" />
-        <label htmlFor="form__textarea">Notes</label>
-        <textarea id="form__textarea"></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
+    <form className="form">
+      <label htmlFor="form__input" className="form--label">
+        Motto
+      </label>
+      <input type="text" id="form__input" className="form--input" />
+      <label htmlFor="form__textarea" className="form--label">
+        Notes
+      </label>
+      <textarea id="form__textarea" className="form--input textarea"></textarea>
+      <button type="submit" className="button submit">
+        Add new Entry
+      </button>
+    </form>
   );
 }

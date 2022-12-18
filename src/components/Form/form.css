@@ -1,0 +1,42 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 90px;
+}
+
+.form--label {
+  margin-bottom: 10px;
+  color: var(--font-color);
+}
+
+.form--input {
+  margin-bottom: 20px;
+  border: none;
+  background: none;
+  border-bottom: 2px solid var(--primary-color);
+  font-size: 1em;
+  font-family: "Stacion-Regular";
+  padding: 5px;
+  color: var(--font-color);
+  transition: 0.2s ease;
+}
+
+.form--input:focus {
+  outline: none;
+  border-bottom: 4px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.textarea {
+  overflow: visible;
+  margin-bottom: 50px;
+}
+
+.submit {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 80px;
+  padding: 13px 0 10px 0;
+  width: 100%;
+  font-size: 1.3em;
+}

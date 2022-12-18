@@ -1,0 +1,26 @@
+.tabBar {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.tabBar--tab {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  opacity: 0.5;
+}
+
+.tab-focused {
+  border-bottom: 2px solid var(--primary-color);
+  opacity: 1;
+}
+
+.tabBar--tab span {
+  background-color: var(--primary-color);
+  margin-left: 5px;
+  border-radius: 50px;
+  padding: 6px 10px 4px 10px;
+  color: var(--secondary-color);
+}
