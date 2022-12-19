@@ -14,7 +14,7 @@
   flex-direction: column;
   /* backdrop-filter: invert(90%); */
   background-color: var(--primary-color);
-  animation: scaleDown 3s ease-in-out;
+  animation: scaleDown 2s ease-in-out;
 }
 
 .popUpSuccses h2 {

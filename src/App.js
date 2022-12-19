@@ -8,15 +8,18 @@ import Footer from "./components/Footer";
 import PopUpSuccses from "./components/PopUpSuccses";
 import { initialEntries } from "./db";
 import { nanoid } from "nanoid";
+import useLocalStorageState from "use-local-storage-state";
 
 function App() {
-  const [entries, setEntries] = useState(initialEntries);
+  const [entries, setEntries] = useLocalStorageState("entries", {
+    defaultValue: initialEntries,
+  });
   const [filter, setFilter] = useState("all");
   const [showPopUp, setShowPopUp] = useState(false);
 
   function handleShowPopUp() {
     setShowPopUp(true);
-    setTimeout(handleHidePopUp, 2900);
+    setTimeout(handleHidePopUp, 1900);
   }
   function handleHidePopUp() {
     setShowPopUp(false);
