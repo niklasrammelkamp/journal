@@ -8,7 +8,6 @@ export default function Form({ onAddEntry, onShowPopUp }) {
     onAddEntry(data);
     onShowPopUp();
     event.target.reset();
-    event.target.elements.motto.focus();
   }
 
   return (
