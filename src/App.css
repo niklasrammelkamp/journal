@@ -6,6 +6,16 @@
 @import url(./components/Footer/footer.css);
 @import url(./components/PopUpSuccses/popUpSuccses.css);
 
+@font-face {
+  font-family: "Stacion-Regular";
+  src: url("./fonts/Stacion-Regular.otf");
+}
+
+@font-face {
+  font-family: "Stacion-Light";
+  src: url("./fonts/Stacion-Light.otf");
+}
+
 :root {
   --primary-color: #a785e2;
   --font-color: rgb(71, 71, 71);
