@@ -4,6 +4,7 @@
 @import url(./components/Entry/entry.css);
 @import url(./components/EntryList/entryList.css);
 @import url(./components/Footer/footer.css);
+@import url(./components/PopUpSuccses/popUpSuccses.css);
 
 :root {
   --primary-color: #a785e2;

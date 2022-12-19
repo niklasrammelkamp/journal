@@ -1,4 +1,4 @@
-export default function Form({ onAddEntry }) {
+export default function Form({ onAddEntry, onShowPopUp }) {
   function handleSubmit(event) {
     event.preventDefault();
 
@@ -6,6 +6,7 @@ export default function Form({ onAddEntry }) {
     const data = Object.fromEntries(formData);
     console.log(onAddEntry);
     onAddEntry(data);
+    onShowPopUp();
     event.target.reset();
     event.target.elements.motto.focus();
   }

@@ -5,23 +5,28 @@ import Form from "./components/Form";
 import TabBar from "./components/TabBar";
 import EntryList from "./components/EntryList";
 import Footer from "./components/Footer";
+import PopUpSuccses from "./components/PopUpSuccses";
 import { initialEntries } from "./db";
 import { nanoid } from "nanoid";
-import { lightning } from "./images/lightning.svg";
 
 function App() {
   const [entries, setEntries] = useState(initialEntries);
   const [filter, setFilter] = useState("all");
+  const [showPopUp, setShowPopUp] = useState(false);
 
-  console.log(filter);
+  function handleShowPopUp() {
+    setShowPopUp(true);
+    setTimeout(handleHidePopUp, 2900);
+  }
+  function handleHidePopUp() {
+    setShowPopUp(false);
+  }
 
   // handle the filter
   function handleFilterChangeToAll() {
-    console.log("set to all");
     setFilter("all");
   }
   function handleFilterChangeToFavorites() {
-    console.log("set to favorites");
     setFilter("favorites");
   }
 
@@ -57,9 +62,11 @@ function App() {
   // the main App
   return (
     <>
+      {showPopUp && <PopUpSuccses />}
+
       <Header />
       <main>
-        <Form onAddEntry={handleAddEntry} />
+        <Form onAddEntry={handleAddEntry} onShowPopUp={handleShowPopUp} />
         <TabBar
           entriesCount={entries.length}
           favoriteEntriesCount={favoriteEntries.length}
@@ -78,12 +85,3 @@ function App() {
 }
 
 export default App;
-
-function PopUpSuccses() {
-  return (
-    <div>
-      <img src={lightning} alt={"lightning illustration"} />
-      <h2> Adding succsesfully</h2>
-    </div>
-  );
-}
