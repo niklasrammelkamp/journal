@@ -1,4 +1,4 @@
-export const entries = [
+export const initialEntries = [
   {
     id: 0,
     isliked: true,

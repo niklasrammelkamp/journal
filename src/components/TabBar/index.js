@@ -1,14 +1,28 @@
-export default function TabBar() {
+export default function TabBar({
+  entriesCount,
+  favoriteEntriesCount,
+  onFilterChangeToAll,
+  onFilterChangeToFavorites,
+  filter,
+}) {
   return (
     <section className="tabBar">
-      <button className="tabBar--tab tab-focused">
+      <button
+        onClick={onFilterChangeToAll}
+        className={filter === "all" ? "tabBar--tab tab-focused" : "tabBar--tab"}
+      >
         <p>
-          All Entries<span>3</span>
+          All Entries<span>{entriesCount}</span>
         </p>
       </button>
-      <button className="tabBar--tab">
+      <button
+        onClick={onFilterChangeToFavorites}
+        className={
+          filter === "favorites" ? "tabBar--tab tab-focused" : "tabBar--tab"
+        }
+      >
         <p>
-          Favorites<span>3</span>
+          Favorites<span>{favoriteEntriesCount}</span>
         </p>
       </button>
     </section>

@@ -1,9 +1,14 @@
 import star from "../../images/star.svg";
 import starFilled from "../../images/star-filled.svg";
-import { useState } from "react";
 
-export default function Entry({ date, motto, notes, isliked }) {
-  const [liked, setLiked] = useState(isliked);
+export default function Entry({
+  date,
+  motto,
+  notes,
+  isliked,
+  onToggleFavorite,
+  id,
+}) {
   return (
     <article className="entryList__article">
       <p className="entryList__article__date">{date}</p>
@@ -12,11 +17,9 @@ export default function Entry({ date, motto, notes, isliked }) {
       <button
         className="entry--star"
         type="button"
-        onClick={() => {
-          setLiked(!liked);
-        }}
+        onClick={() => onToggleFavorite(id)}
       >
-        <Star src={liked ? starFilled : star} alt="Star Icon" />
+        <Star src={isliked ? starFilled : star} alt="Star Icon" />
       </button>
     </article>
   );
